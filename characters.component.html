@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Species</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Base Experience</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pokemon of data">
+      <td>{{ pokemon.name }}</td>
+      <td>{{ pokemon.species.name }}</td>
+      <td>{{ pokemon.height }}</td>
+      <td>{{ pokemon.weight }}</td>
+      <td>{{ pokemon.base_experience }}</td>
+      <td><img [src]="pokemon.sprites.front_default" [alt]="pokemon.name"></td>
+    </tr>
+  </tbody>
+</table>
+
